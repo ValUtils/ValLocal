@@ -11,7 +11,7 @@ A Python module for interacting with the RiotClient local api.
 
 ## Installation
 
-The prefered method of instaltion is through `pip` but if you know better use the package manager that you want.
+The preferred method of installation is through `pip` but if you know better use the package manager that you want.
 
 ```sh
 pip install git+https://github.com/ValUtils/ValLocal.git
@@ -25,7 +25,7 @@ ValLib contains this basic building blocks:
 
 - `LockFile` a dataclass containing the lockfile data
 
-And the following methdos:
+And the following methods:
 
 - `get_lockfile` to get the lockfile as a `LockFile` instance
 - `local_api` to make requests to the RiotClient, using `LockFile`
