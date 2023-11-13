@@ -1,6 +1,6 @@
 [project]
 name = "ValLocal"
-version = "0.0.1"
+version = "0.1.0"
 readme = "README.md"
 authors = [{ name = "PWall" }]
 license = {text = "GPL-3.0"}
@@ -14,7 +14,7 @@ requires-python = ">=3.8"
 Homepage = "https://github.com/ValUtils/ValLocal"
 
 [tool.bumpver]
-current_version = "0.0.1"
+current_version = "0.1.0"
 version_pattern = "MAJOR.MINOR.PATCH"
 commit_message = "bump chore: version bump"
 commit = true
