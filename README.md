@@ -1,6 +1,8 @@
 # ValLocal
 
-![GitHub](https://img.shields.io/github/license/ValUtils/ValLib)
+[![PyPI - Version](https://img.shields.io/pypi/v/ValLocal?label=ValLocal)](https://pypi.org/project/ValLocal/)
+![GitHub deployments](https://img.shields.io/github/deployments/ValUtils/ValLocal/deploy?label=deploy)
+![GitHub](https://img.shields.io/github/license/ValUtils/ValLocal)
 
 A Python module for interacting with the RiotClient local api.
 
