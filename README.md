@@ -17,7 +17,7 @@ A Python module for interacting with the RiotClient local api.
 The preferred method of installation is through `pip` but if you know better use the package manager that you want.
 
 ```sh
-pip install git+https://github.com/ValUtils/ValLocal.git
+pip install ValLocal
 ```
 
 ## Reference
