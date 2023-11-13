@@ -10,6 +10,7 @@ A Python module for interacting with the RiotClient local api.
 
 - Automated lockfile grabbing
 - Request method
+- Riot auth
 
 ## Installation
 
