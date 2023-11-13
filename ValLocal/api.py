@@ -1,6 +1,6 @@
 from typing import Dict, Literal
 
-from requests import Response, request
+from httpx import Response, request
 
 from .parsing import encode
 from .structs import LockFile
