@@ -29,6 +29,7 @@ And the following methods:
 
 - `get_lockfile` to get the lockfile as a `LockFile` instance
 - `local_api` to make requests to the RiotClient, using `LockFile`
+- `local_auth` to get riot auth, using `LockFile`
 
 ### Ussage
 
@@ -39,6 +40,19 @@ lock = ValLocal.get_lockfile()
 api_help = ValLocal.local_api(lock, "GET", "/help").text
 print(api_help)
 ```
+
+### Auth
+
+Getting auth for remote endpoints
+
+```python
+import ValLocal
+
+lock = ValLocal.get_lockfile()
+auth = ValLocal.local_auth(lock)
+```
+
+This is the same auth as [ValLib](https://github.com/ValUtils/ValLib) ExtraAuth and it can be used both in [ValLib](https://github.com/ValUtils/ValLib) api and [ValWrap](https://github.com/ValUtils/ValWrap) endpoints.
 
 ## Roadmap
 
