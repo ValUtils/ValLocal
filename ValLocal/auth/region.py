@@ -1,6 +1,6 @@
 import re
 from pathlib import Path
-from typing import List, Optional
+from typing import Any, Dict, List, Optional
 
 from ValLib.api import get_shard
 
@@ -32,14 +32,21 @@ def match_region(region: str):
     return "na"
 
 
-def get_args(data) -> Optional[List[str]]:
+def get_val_args(data: Dict[str, Any]) -> Optional[List[str]]:
     try:
-        args: List[str] = data["host_app"]["launchConfiguration"]["arguments"]
+        args: List[str] = data["launchConfiguration"]["arguments"]
     except IndexError:
         return
     if "ares-deployment" not in "".join(args):
         return
     return args
+
+
+def get_args(data: Dict[str, Any]) -> Optional[List[str]]:
+    for d in data.values():
+        args = get_val_args(d)
+        if args is not None:
+            return args
 
 
 def get_by_args(lock: LockFile) -> Optional[str]:
