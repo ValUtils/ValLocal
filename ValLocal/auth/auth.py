@@ -1,3 +1,5 @@
+from time import time
+
 from ValLib import Auth, ExtraAuth, Token
 
 from ..api import local_api
@@ -7,7 +9,7 @@ from .region import get_locale
 
 def get_entitlements(lock: LockFile) -> Auth:
     data = local_api(lock, "GET", "/entitlements/v1/token").json()
-    token = Token(data["accessToken"], "", 0)
+    token = Token(data["accessToken"], "", 0, time())
     auth = Auth(token, data["token"], data["subject"], False, {})
     return auth
 
